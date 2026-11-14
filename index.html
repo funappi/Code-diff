@@ -6,6 +6,13 @@
 <title>Écart — comparateur de texte</title>
 <meta name="description" content="Comparateur de texte et de code en ligne, en thème sombre : vue côte à côte ou unifiée, modification directe dans le diff, fusion, auto-indentation et explications par IA avec ta propre clé ou un modèle local.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='2' y='3' width='9' height='18' rx='2.5' fill='%23e5534b'/%3E%3Crect x='13' y='3' width='9' height='18' rx='2.5' fill='%232ea57a'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Écart — comparateur de texte">
+<meta property="og:description" content="Comparateur de texte et de code en thème sombre : côte à côte ou unifié, fusion, explications par IA.">
+<meta property="og:url" content="https://funappi.github.io/Code-diff/">
+<meta property="og:image" content="https://funappi.github.io/Code-diff/docs/apercu.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0e1014">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -590,7 +597,7 @@ function render(){
   updateMeta();
   if(!L.length&&!R.length){
     ed=null;
-    diffEl.innerHTML=`<div class="empty"><div><h3>Colle deux textes pour les comparer</h3><p>Texte, code, logs, CSV, JSON… à gauche l'original, à droite la version modifiée.</p><p>Les différences se recalculent pendant que tu tapes.</p><p style="margin-top:12px"><button class="linkbtn" id="demo">Charger un exemple</button></p></div></div>`;
+    diffEl.innerHTML=`<div class="empty"><div><h3>Colle deux textes pour les comparer</h3><p>Texte, code, logs, CSV, JSON… à gauche l'original, à droite la version modifiée.</p><p>Les différences se recalculent pendant que tu tapes.</p><p style="margin-top:12px"><button class="linkbtn" id="demo">Charger un exemple</button></p><p style="margin-top:28px;font-size:12px;opacity:.7">Made by <a href="https://github.com/orgs/funappi/repositories" target="_blank" rel="noopener noreferrer" style="color:inherit;font-weight:600">Funappi</a></p></div></div>`;
     $('#demo').onclick=loadDemo;updateNav();drawMM();return;
   }
   const vr=visibleRows();let h='';
